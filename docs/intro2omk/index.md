@@ -9,14 +9,6 @@ authors: Hannah Jacobs
 
 Videos: [http://bit.ly/omeka-videos-2017](http://bit.ly/omeka-videos-2017)
 
-
-## Table of Contents
-
-
-[TOC]
-
-
-
 ## What is Omeka? {#what-is-omeka}
 
 Omeka ([http://omeka.org/](http://omeka.org/)) is a web content management system for scholars, museums, archives, and enthusiasts. It enables its users to structure information about physical or virtual people, places, things; to express relationships between these objects; to curate public digital archives; and to develop public digital exhibits.
@@ -25,6 +17,8 @@ Omeka ([http://omeka.org/](http://omeka.org/)) is a web content management syste
 ## Omeka's Data Structure {#omeka's-data-structure}
 
 Omeka's archival structure is made up of Items (objects) organized into Collections (groups of objects).
+
+![Omeka's data structure](images/image15.png)
 
 Collections and Items are described in an organized, consistent, extensible way using the Dublin Core metadata standard ([http://dublincore.org/](http://dublincore.org/)).[^1]
 
