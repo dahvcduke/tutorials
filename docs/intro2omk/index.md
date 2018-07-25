@@ -22,7 +22,7 @@ Omeka's archival structure is made up of Items (objects) organized into Collecti
 
 Collections and Items are described in an organized, consistent, extensible way using the Dublin Core metadata standard ([http://dublincore.org/](http://dublincore.org/)).[^1]
 
-
+![Omeka's Dublin Core fields](images/image6.png)
 
 1.  Before we begin adding Collections and Items to an Omeka archive, we'll want to **take time to consider our data structure** by answering the following questions:
     1.  **What are our Items?** How many are there? What kinds of metadata do we have about them?
@@ -46,6 +46,7 @@ Editing an Omeka site takes place in a web browser with user access via a Dashbo
 ### Beginning an Omeka Archive {#beginning-an-omeka-archive}
 
 
+![Omeka's Dashboard menu](images/image16.png#right) 
 
 1.  You should have received an account activation email prior to the workshop. Check your Junk/Spam folder if you do not see it in your Inbox. Follow the email's instructions to confirm your account.
 1.  Navigate to [http://romanspectacle.trinity.duke.edu/admin](http://wired.dukedh.org/nhc_omeka/admin) to login.
