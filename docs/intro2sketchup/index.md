@@ -5,7 +5,7 @@ updated: July 20, 2018
 authors: Hannah Jacobs, Mark Olson
 ---
 
-_Follow the **bolded** text to find essential information. To download this guide as a .pdf, go to File > Download as > PDF Document. (Note that internal links may not work outside of Google Docs.)_
+_Follow the **bolded** text to find essential information._
 
 **_This tutorial introduces techniques for using SketchUp Pro 2018.  The free version of SketchUp is now an [online tool](https://app.sketchup.com/app).  Download information for SketchUp is available at [this URL.](https://help.sketchup.com/en/sketchup/downloading-sketchup)   This tutorial introduces the OS X interface for SketchUp Pro; the Windows interface may differ slightly._**
 
