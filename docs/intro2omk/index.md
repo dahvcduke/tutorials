@@ -46,7 +46,7 @@ Editing an Omeka site takes place in a web browser with user access via a Dashbo
 ### Beginning an Omeka Archive {#beginning-an-omeka-archive}
 
 
-![Omeka's Dashboard menu](images/image16.png#right) 
+![Omeka's Dashboard menu](images/image16.png#right#50) 
 
 1.  You should have received an account activation email prior to the workshop. Check your Junk/Spam folder if you do not see it in your Inbox. Follow the email's instructions to confirm your account.
 1.  Navigate to [http://romanspectacle.trinity.duke.edu/admin](http://wired.dukedh.org/nhc_omeka/admin) to login.
