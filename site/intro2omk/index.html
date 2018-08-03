@@ -1,0 +1,681 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="This tutorial introduces the interface of and techniques for using Omeka Classic 2.6.">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../images/favicon.ico">
+      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.2">
+    
+    
+      
+        <title>Introduction to Omeka Classic 2018</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.ba0fd1a6.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.6079476c.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#what-is-omeka" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Wired! Lab - Tutorial Repository" class="md-header-nav__button md-logo">
+          
+            <img src="../images/wired_avatar.svg" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Wired! Lab - Tutorial Repository
+              </span>
+              <span class="md-header-nav__topic">
+                Introduction to Omeka
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <span class="md-nav__button md-logo">
+      
+        <img src="../images/wired_avatar.svg" width="48" height="48">
+      
+    </span>
+    Wired! Lab - Tutorial Repository
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Using MkDocs for Wired Documentation" class="md-nav__link">
+      Using MkDocs for Wired Documentation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Sketchup
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Sketchup
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../intro2sketchup/" title="Introduction to SketchUp 2018" class="md-nav__link">
+      Introduction to SketchUp 2018
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Omeka
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Omeka
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Introduction to Omeka
+      </label>
+    
+    <a href="./" title="Introduction to Omeka" class="md-nav__link md-nav__link--active">
+      Introduction to Omeka
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-omeka" title="What is Omeka?" class="md-nav__link">
+    What is Omeka?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#omekas-data-structure" title="Omeka's Data Structure" class="md-nav__link">
+    Omeka's Data Structure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#omekas-interface" title="Omeka's Interface" class="md-nav__link">
+    Omeka's Interface
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#beginning-an-omeka-archive" title="Beginning an Omeka Archive" class="md-nav__link">
+    Beginning an Omeka Archive
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-collections-items-adding-collections-items" title="Adding Collections &amp; Items {#adding-collections-&amp;-items}" class="md-nav__link">
+    Adding Collections &amp; Items {#adding-collections-&amp;-items}
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-tags-to-link-items-using-tags-to-link-items" title="Using Tags to Link Items {#using-tags-to-link-items}" class="md-nav__link">
+    Using Tags to Link Items {#using-tags-to-link-items}
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedding-interactive-media" title="Embedding Interactive Media" class="md-nav__link">
+    Embedding Interactive Media
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selected-examples" title="Selected Examples" class="md-nav__link">
+    Selected Examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" title="Notes" class="md-nav__link">
+    Notes
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-omeka" title="What is Omeka?" class="md-nav__link">
+    What is Omeka?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#omekas-data-structure" title="Omeka's Data Structure" class="md-nav__link">
+    Omeka's Data Structure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#omekas-interface" title="Omeka's Interface" class="md-nav__link">
+    Omeka's Interface
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#beginning-an-omeka-archive" title="Beginning an Omeka Archive" class="md-nav__link">
+    Beginning an Omeka Archive
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-collections-items-adding-collections-items" title="Adding Collections &amp; Items {#adding-collections-&amp;-items}" class="md-nav__link">
+    Adding Collections &amp; Items {#adding-collections-&amp;-items}
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-tags-to-link-items-using-tags-to-link-items" title="Using Tags to Link Items {#using-tags-to-link-items}" class="md-nav__link">
+    Using Tags to Link Items {#using-tags-to-link-items}
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedding-interactive-media" title="Embedding Interactive Media" class="md-nav__link">
+    Embedding Interactive Media
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selected-examples" title="Selected Examples" class="md-nav__link">
+    Selected Examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" title="Notes" class="md-nav__link">
+    Notes
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+    
+    
+        
+        <div id="titleb4authors">
+            <h1 class="titleb4authors">Introduction to Omeka</h1>
+                <p style="float:left;">Last Update: <em>July 25, 2018</em></p>
+                
+                <p style="float:right;">Author(s): <em>Hannah Jacobs</em></p>
+                
+                <hr />
+            </div> 
+        
+    
+    <p>Video tutorials: <a href="http://bit.ly/omeka-videos-2017">http://bit.ly/omeka-videos-2017</a></p>
+<h2 id="what-is-omeka">What is Omeka?</h2>
+<p>Omeka (<a href="http://omeka.org/">http://omeka.org/</a>) is a web content management system for scholars, museums, archives, and enthusiasts. It enables its users to structure information about physical or virtual people, places, things; to express relationships between these objects; to curate public digital archives; and to develop public digital exhibits.</p>
+<h2 id="omekas-data-structure">Omeka's Data Structure</h2>
+<p>Omeka's archival structure is made up of Items (objects) organized into Collections (groups of objects).</p>
+<p><img alt="Omeka's data structure" src="./images/image15.png" /></p>
+<p>Collections and Items are described in an organized, consistent, extensible way using the Dublin Core metadata standard (<a href="http://dublincore.org/">http://dublincore.org/</a>).<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup></p>
+<p><img alt="Omeka's Dublin Core fields" src="./images/image6.png" /></p>
+<ol>
+<li>
+<p>Before we begin adding Collections and Items to an Omeka archive, we'll want to <strong>take time to consider our data structure</strong> by answering the following questions:</p>
+<ol>
+<li><strong>What are our Items?</strong> How many are there? What kinds of metadata do we have about them?</li>
+<li><strong>How will we organize our Items?</strong> What kinds of parameters will we use to separate our Items into Collections? <em>Consider theme, geographic region, time period, typology, etc.</em></li>
+<li><strong>Which Dublin Core fields</strong> will we use to describe our Collections and our Items? Which formats will we use for recording dates, place names, etc.? Identify a consistent way of describing your metadata for each field.</li>
+</ol>
+<p><em><strong>Record your data structure choices</strong> in project notes that you keep outside of Omeka. Create spreadsheets of your archival data (one for Items, one for Collections) using   Dublin Core terms as column headers in preparation for entering your data into Omeka.</em></p>
+</li>
+<li>
+<p><strong>Use a spreadsheet to organize your data</strong> before you move it into Omeka: each Item should have its own row while Dublin Core fields should be divided into columns.</p>
+</li>
+</ol>
+<h2 id="omekas-interface">Omeka's Interface</h2>
+<p>Omeka is entirely web-based. To fully take advantage of its <a href="https://omeka.org/">free tools</a>, users need space on a server to host their Omeka site. Services such as <a href="https://reclaimhosting.com/">Reclaim Hosting</a> and <a href="https://www.acugis.com/">AcuGIS</a> make this possible. Scholars may also wish to seek server support from their individual institution. Hosting locally on a single device or on a virtual machine is also possible.</p>
+<p>It's also possible to host an Omeka site via <a href="https://www.omeka.net/">omeka.net</a>, the hosting service Omeka offers. (Note, however, the pricing scheme and available tools.)</p>
+<p>Editing an Omeka site takes place in a web browser with user access via a Dashboard area.</p>
+<h3 id="beginning-an-omeka-archive">Beginning an Omeka Archive</h3>
+<p><img alt="Omeka's Dashboard menu" src="./images/image16.png#right#50" /></p>
+<ol>
+<li>You should have received an account activation email prior to the workshop. Check your Junk/Spam folder if you do not see it in your Inbox. Follow the email's instructions to confirm your account.</li>
+<li>Navigate to <a href="http://wired.dukedh.org/nhc_omeka/admin">http://romanspectacle.trinity.duke.edu/admin</a> to login.</li>
+<li>You will be redirected to the workshop's Omeka dashboard.</li>
+<li>Look at the left menu in your browser window. Here we can access locations for creating Collections and Items.</li>
+<li>The Collections and Items sections provide areas for users to add and edit Dublin Core metadata. The data entry forms for both are formatted the same:
+<img alt="Item data entry form" src="./images/image14.png" /></li>
+<li>Navigate to "Items", and click "Add an Item" to view the form.</li>
+<li>Navigate to "Collections", click "Add a Collection", and view the form. Note the similarities between the "Items" and "Collections" forms: <em>how are they used differently?</em></li>
+<li>Before continuing, note the <em>top</em> menu. In this area, you will find controls for adjusting your user settings, settings and appearance of the website, and plugin configurations.
+<img alt="Configuration menu" src="./images/image1.png" />
+    <em>For this workshop, you have been given Admin permissions. Once you are familiar with how to add content, explore the settings in this top menu, which control the site's design and functionality. Exercise your powers wisely &amp; ask questions often.</em></li>
+</ol>
+<h3 id="adding-collections-items-adding-collections-items">Adding Collections &amp; Items {#adding-collections-&amp;-items}</h3>
+<ol>
+<li>Once you have decided on a data structure, begin your Omeka archive by creating a Collection. Navigate in the left menu to "Collections", and click "Add a Collection".
+<img alt="Browse Collections" src="./images/image17.png" /></li>
+<li>Enter your metadata in the appropriate Dublin Core fields.</li>
+<li>When you have finished adding metadata and are ready to make your Collection publicly available, check the "Public" box at the top right of the Add Collection page. (You may also do this later.) <img alt="Add Collection" src="./images/image18.png#right" /></li>
+<li>Click "Add Collection" to save and publish your Collection.</li>
+<li>You will be redirected to the Browse Collections page. Now your Collection is listed in a newly created table. Note that your collection is empty: Total Number of Items is listed as 0.
+<img alt="List of Collections" src="./images/image19.png" /></li>
+<li>Let's add Items to your Collection. We can create Items individually by following the instructions below <em>or _we can add multiple Items at once following <a href="https://docs.google.com/document/d/1iHm5b-dswu0_ZjeAALaHwQbNDvtIhh1JaJFZ3zbxABs/edit?usp=sharing">this tutorial</a>, which explains how to import data from a spreadsheet. _You will receive a print copy as well.</em></li>
+<li><strong>To continue by adding 1 Item at a time:</strong> navigate to "Items" in the lefthand menu. Click "Add an Item" to fill out the Dublin Core for one Item.
+<img alt="Add an item" src="./images/image20.png" /></li>
+<li>Note that it is possible to <strong>add multiple entries to a single Dublin Core field</strong> by clicking the "Add Input" button below a Dublin Core field. <img alt="Add field button" src="./images/image10.png#right" /></li>
+<li><strong>To add links, images, and embed interactive media</strong> in a Dublin Core field, check the "Use HTML" box below a Dublin Core field.
+<img alt="Use HTML button" src="./images/image5.png" /></li>
+<li>At the top of the "Add an Item" page, note the red tabs. <em>You may see some or all of these tabs in your tutorial site.</em>
+<img alt="Upload files" src="./images/image8.png" /></li>
+<li><strong>Click "Files" to learn how to upload viewable images, documents, audio, or video. <em>You can upload other file types as well, but these will only be available for download</em></strong>. <strong>A single Item may have multiple Files attached</strong>. This workshop's Omeka site allows for file sizes up to 128 MB.</li>
+<li>Click "Choose File", browse your computer, and locate the file you'd like to upload.
+<img alt="Item entry tabs" src="./images/image13.png" /></li>
+<li>
+<p>If you wish to add a second file, click "Add Another File", and browse for that file.</p>
+<p><em>Note that your files are not uploaded until you publish your Item.</em></p>
+</li>
+<li>
+<p>In the top right box, check "Public" if you wish to make your Item publicly available, and choose the Collection into which you would like to place the Item. Click "Add Item" to publish your Item <em>and</em> to upload your file(s).<img alt="PUblish an Item" src="./images/image22.png" /></p>
+</li>
+</ol>
+<h3 id="using-tags-to-link-items-using-tags-to-link-items">Using Tags to Link Items {#using-tags-to-link-items}</h3>
+<p>It is possible to use Tags — individual words or phrases — to categorize Items thematically <em>outside</em> of the Collections structure. When viewers click on Tags on individual Item pages, they will see a list of all Items sharing those tags regardless of Collection. It is also possible to search Omeka by Tag keywords.</p>
+<div class="codehilite"><pre><span></span>_To ensure consistency, consider developing a tag reference guide outside of Omeka. This way you and your collaborators know which tags should be used. For example, define what kinds of information are being used for tags, which language you are using if working on a multilingual project, or whether you are using abbreviations or full names of organizations._
+</pre></div>
+
+
+<ol>
+<li>In an Item's Edit page, click the "Tags" tab.
+<img alt="Item Tags tab" src="./images/image4.png" /></li>
+<li>Add single or multi-word tags separated by commas. Click "Add Tags" and save your Item to publish your tags.
+<img alt="Add tags" src="./images/image3.png" /></li>
+<li>When you add the same tag(s) to another Item, Omeka will provide them as suggestions in a dropdown menu as you type.</li>
+<li>View, edit, and delete tags in the "Tags" Dashboard page. (Button in the left menu.)<img alt="Tags menu Item" src="./images/image7.png" /></li>
+</ol>
+<h3 id="embedding-interactive-media">Embedding Interactive Media</h3>
+<p>To embed interactive media in an Item or Collection:</p>
+<ol>
+<li>
+<p>Below the "Relation" field, check the box labeled "Use HTML":
+<img alt="Relation field" src="./images/image11.png" /></p>
+</li>
+<li>
+<p>A rich text menu will appear above your page's textbox. Locate the HTML button. Click on it to open an HTML editing window.
+<img alt="HTML source textbox" src="./images/image2.png" /></p>
+</li>
+<li>
+<p>Paste an embed code (<code>&lt;iframe&gt;</code>) into the window. (Or add your own HTML and inline CSS here!)</p>
+</li>
+<li>
+<p>Click "Update" to Save your Item or Collection.</p>
+</li>
+</ol>
+<h2 id="selected-examples">Selected Examples</h2>
+<ul>
+<li>Baroque Italian Art (Fall 2016): <a href="http://baroque.trinity.duke.edu">http://baroque.trinity.duke.edu</a></li>
+<li>Getty Kouros: <a href="https://arthistorykmg.omeka.net/">https://arthistorykmg.omeka.net/</a></li>
+<li>Quattro Centro: <a href="http://quattrocentoitalia.artinterp.org/omeka/">http://quattrocentoitalia.artinterp.org/omeka/</a></li>
+<li>Documenting the Gilded Age: <a href="http://gildedage.omeka.net/">http://gildedage.omeka.net/</a></li>
+</ul>
+<!-- Footnotes themselves at the bottom. -->
+
+<h2 id="notes">Notes</h2>
+<!-- GD2md-html version 1.0β11 -->
+
+<!----- Conversion time: 1.904 seconds.
+
+Using this Markdown file:
+
+1. Cut and paste this output into your source file.
+2. See the notes and action items below regarding this conversion run.
+3. Check the rendered output (headings, lists, code blocks, tables) for proper
+   formatting and use a linkchecker before you publish this page.
+
+Conversion notes:
+
+* GD2md-html version 1.0β11
+* Wed Jul 25 2018 10:41:01 GMT-0700 (PDT)
+* Source doc: https://docs.google.com/open?id=1kufh1so0Ug_5ILs2g-spp5BaGlVPQdhUsMdfHicmXpg
+----->
+
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Metadata is carefully categorized information about an object such as its discovery date, geographic origin, creator, format, or owner. A metadata standard is a widely accepted set of terms used to categorize metadata. Using a standard ensures that a wide range of archival collections could be extended and/or combined. (Indeed, Omeka makes this possible.)&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+    
+        
+    
+
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../intro2sketchup/" title="Introduction to SketchUp 2018" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Introduction to SketchUp 2018
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.a59e2a89.js"></script>
+      
+      <script>app.initialize({version:"0.17.5",url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
