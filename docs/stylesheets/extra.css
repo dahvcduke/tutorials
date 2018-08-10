@@ -51,6 +51,10 @@ img[src*='#50']{
     width: 49%;
     height: auto;
 }
+img[src*='#60'] { 
+    width: 60%;
+    height: auto;
+}
 img[src*='#pad-top']{
     padding-top: 1rem;
 }
