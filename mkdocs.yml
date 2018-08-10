@@ -41,5 +41,7 @@ pages:
     - 'Introduction to SketchUp 2018' : 'intro2sketchup/index.md'
   - Omeka:
     - 'Introduction to Omeka' : 'intro2omk/index.md'
+  - StoryMapJS:
+    - 'StoryMapJS' : 'strympjs/index.md'
 
 
