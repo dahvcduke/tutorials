@@ -9,11 +9,9 @@ Video tutorials: [http://bit.ly/omeka-videos-2017](http://bit.ly/omeka-videos-20
 
 ## What is Omeka?
 
+<iframe width="75%" height="315" src="https://www.youtube.com/embed/tii2aL7cMBE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
 Omeka ([http://omeka.org/](http://omeka.org/)) is a web content management system for scholars, museums, archives, and enthusiasts. It enables its users to structure information about physical or virtual people, places, things; to express relationships between these objects; to curate public digital archives; and to develop public digital exhibits.
-
-Watch this video for a visual & aural explanation:
-
-[![Getting started with Omeka video](http://img.youtube.com/vi/tii2aL7cMBE/0.jpg)](http://www.youtube.com/watch?v=tii2aL7cMBE)
 
 ## Omeka's Data Structure
 
@@ -36,6 +34,8 @@ Collections and Items are described in an organized, consistent, extensible way 
 
 
 ## Omeka's Interface
+
+<iframe width="75%" height="315" src="https://www.youtube.com/embed/PNOkRyrJ4WI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 Omeka is entirely web-based. To fully take advantage of its [free tools](https://omeka.org/), users need space on a server to host their Omeka site. Services such as [Reclaim Hosting](https://reclaimhosting.com/) and [AcuGIS](https://www.acugis.com/) make this possible. Scholars may also wish to seek server support from their individual institution. Hosting locally on a single device or on a virtual machine is also possible.
 
@@ -61,6 +61,8 @@ Editing an Omeka site takes place in a web browser with user access via a Dashbo
 
 
 ### Adding Collections & Items
+
+<iframe width="75%" height="315" src="https://www.youtube.com/embed/jeWFIRbMEN8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 1.  Once you have decided on a data structure, begin your Omeka archive by creating a Collection. Navigate in the left menu to "Collections", and click "Add a Collection".
 ![Browse Collections](images/image17.png#center)
@@ -104,6 +106,8 @@ _To ensure consistency, consider developing a tag reference guide outside of Ome
 
 
 ### Embedding Interactive Media
+
+<iframe width="75%" height="315" src="https://www.youtube.com/embed/83CbskOLNO8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 To embed interactive media in an Item or Collection:
 
