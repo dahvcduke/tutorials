@@ -19,7 +19,7 @@ Omeka's archival structure is made up of Items (objects) organized into Collecti
 
 <img src="https://dukewired.github.io/tutorials/intro2omk/images/image15.png" width="25%"/>
 
-![Omeka's data structure](images/image15.png#center#50)
+<!--(![Omeka's data structure](images/image15.png#center#50)-->
 
 Collections and Items are described in an organized, consistent, extensible way using the Dublin Core metadata standard ([http://dublincore.org/](http://dublincore.org/)).[^1]
 
