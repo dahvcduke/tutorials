@@ -17,6 +17,8 @@ Omeka ([http://omeka.org/](http://omeka.org/)) is a web content management syste
 
 Omeka's archival structure is made up of Items (objects) organized into Collections (groups of objects).
 
+<img src="images/image15.png" style="width:25%; float:right;"/>
+
 ![Omeka's data structure](images/image15.png#center#50)
 
 Collections and Items are described in an organized, consistent, extensible way using the Dublin Core metadata standard ([http://dublincore.org/](http://dublincore.org/)).[^1]
