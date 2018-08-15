@@ -1,0 +1,938 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="This tutorial introduces the interface of and techniques for using Knight Lab's StoryMapJS">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.1, mkdocs-material-3.0.3">
+    
+    
+      
+        <title>StoryMapJS</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.451f80e5.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="../#what-is-storymapjs" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Wired! Lab - Tutorial Repository" class="md-header-nav__button md-logo">
+          
+            <img src="../images/wired_avatar.svg" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Wired! Lab - Tutorial Repository
+              </span>
+              <span class="md-header-nav__topic">
+                StoryMapJS
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Wired! Lab - Tutorial Repository" class="md-nav__button md-logo">
+      
+        <img src="../images/wired_avatar.svg" width="48" height="48">
+      
+    </a>
+    Wired! Lab - Tutorial Repository
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Using MkDocs for Wired Documentation" class="md-nav__link">
+      Using MkDocs for Wired Documentation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Sketchup
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Sketchup
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../intro2sketchup/" title="Introduction to SketchUp 2018" class="md-nav__link">
+      Introduction to SketchUp 2018
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Omeka
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Omeka
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../intro2omk/" title="Introduction to Omeka" class="md-nav__link">
+      Introduction to Omeka
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      StoryMapJS
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        StoryMapJS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        StoryMapJS
+      </label>
+    
+    <a href="./" title="StoryMapJS" class="md-nav__link md-nav__link--active">
+      StoryMapJS
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-storymapjs" title="What is StoryMapJS?" class="md-nav__link">
+    What is StoryMapJS?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#possible-use-cases" title="Possible Use Cases" class="md-nav__link">
+    Possible Use Cases
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#in-the-field" title="In the Field" class="md-nav__link">
+    In the Field
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-the-classroom" title="In the Classroom" class="md-nav__link">
+    In the Classroom
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-a-publication-or-presentation" title="In a Publication or Presentation" class="md-nav__link">
+    In a Publication or Presentation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-storymap" title="Create a StoryMap" class="md-nav__link">
+    Create a StoryMap
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#whats-your-story" title="What's your story?" class="md-nav__link">
+    What's your story?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gather-media-content" title="Gather Media Content" class="md-nav__link">
+    Gather Media Content
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-edit-a-storymap" title="Create &amp; Edit a StoryMap" class="md-nav__link">
+    Create &amp; Edit a StoryMap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anatomy-of-a-storymap-slide" title="Anatomy of a StoryMap Slide" class="md-nav__link">
+    Anatomy of a StoryMap Slide
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sharing-your-storymap" title="Sharing your StoryMap" class="md-nav__link">
+    Sharing your StoryMap
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#saving-your-storymap" title="Saving your StoryMap" class="md-nav__link">
+    Saving your StoryMap
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beyond-the-basics-customizations" title="Beyond the Basics: Customizations" class="md-nav__link">
+    Beyond the Basics: Customizations
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#html-editing" title="HTML Editing" class="md-nav__link">
+    HTML Editing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#styling-a-storymap" title="Styling a StoryMap" class="md-nav__link">
+    Styling a StoryMap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#choosing-a-base-map" title="Choosing a Base Map" class="md-nav__link">
+    Choosing a Base Map
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-custom-map" title="Adding a Custom Map" class="md-nav__link">
+    Adding a Custom Map
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-a-gigapixel-image" title="Using a Gigapixel Image" class="md-nav__link">
+    Using a Gigapixel Image
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" title="Resources" class="md-nav__link">
+    Resources
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-storymapjs" title="What is StoryMapJS?" class="md-nav__link">
+    What is StoryMapJS?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#possible-use-cases" title="Possible Use Cases" class="md-nav__link">
+    Possible Use Cases
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#in-the-field" title="In the Field" class="md-nav__link">
+    In the Field
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-the-classroom" title="In the Classroom" class="md-nav__link">
+    In the Classroom
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-a-publication-or-presentation" title="In a Publication or Presentation" class="md-nav__link">
+    In a Publication or Presentation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-storymap" title="Create a StoryMap" class="md-nav__link">
+    Create a StoryMap
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#whats-your-story" title="What's your story?" class="md-nav__link">
+    What's your story?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gather-media-content" title="Gather Media Content" class="md-nav__link">
+    Gather Media Content
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-edit-a-storymap" title="Create &amp; Edit a StoryMap" class="md-nav__link">
+    Create &amp; Edit a StoryMap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anatomy-of-a-storymap-slide" title="Anatomy of a StoryMap Slide" class="md-nav__link">
+    Anatomy of a StoryMap Slide
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sharing-your-storymap" title="Sharing your StoryMap" class="md-nav__link">
+    Sharing your StoryMap
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#saving-your-storymap" title="Saving your StoryMap" class="md-nav__link">
+    Saving your StoryMap
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beyond-the-basics-customizations" title="Beyond the Basics: Customizations" class="md-nav__link">
+    Beyond the Basics: Customizations
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#html-editing" title="HTML Editing" class="md-nav__link">
+    HTML Editing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#styling-a-storymap" title="Styling a StoryMap" class="md-nav__link">
+    Styling a StoryMap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#choosing-a-base-map" title="Choosing a Base Map" class="md-nav__link">
+    Choosing a Base Map
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-custom-map" title="Adding a Custom Map" class="md-nav__link">
+    Adding a Custom Map
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-a-gigapixel-image" title="Using a Gigapixel Image" class="md-nav__link">
+    Using a Gigapixel Image
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" title="Resources" class="md-nav__link">
+    Resources
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+    
+    
+        
+        <div id="titleb4authors">
+            <h1 class="titleb4authors">StoryMapJS</h1>
+                <p style="float:left;">Last Update: <em>August 10, 2018</em></p>
+                
+                <p style="float:right;">Author(s): <em>Hannah Jacobs, Beth Fischer</em></p>
+                
+                <hr />
+            </div> 
+        
+    
+    <h2 id="what-is-storymapjs">What is StoryMapJS?</h2>
+<p>StoryMapJS (<a href="https://storymap.knightlab.com/">https://StoryMap.knightlab.com/</a>) is an <a href="https://opensource.org/osd">open source</a> <a href="https://en.wikipedia.org/wiki/Web_application#Definition_and_similar_terms">web application</a> created by the <a href="https://knightlab.northwestern.edu/">Knight Lab</a> at Northwestern University.</p>
+<p>With StoryMapJS, authors can quickly create simple but powerful spatial narratives. StoryMapJS narratives are made up of <a href="#anatomy-of-a-storymap-slide">slides (individual events or parts of a narrative)</a>. Each slide is connected to a specific point in space. This narrative "space" may be either geographic or cartesian: slides may be connected to points on a <a href="https://en.wikipedia.org/wiki/Georeferencing">geo-referenced map</a> (such as Open Street Maps) or points on an image the author provides. </p>
+<p>The location-based stories created in StoryMapJS may also be time-based, <em>but they do not have to be</em>. There is no explicit timeline feature, so the ordering of the narrative is up to the author. These stories can then be published via StoryMapJS, shared, and embedded on other websites. </p>
+<h2 id="possible-use-cases">Possible Use Cases</h2>
+<p>StoryMapJS is a free, easy-to-learn, and visually appealing tool that could be used for teaching or research. It could be used to explore data, develop a project prototype, or present a variety of humanities arguments. The following are just a <em>few</em> ideas for how StoryMapJS might be used in teaching and research.</p>
+<h3 id="in-the-field">In the Field</h3>
+<p>Use StoryMapJS for quick visualization:
+<em>   Document site-specific media you wish to return to later.
+</em>   Test an idea for a spatial interactive narrative.
+<em>   Record and view a series of location-based events quickly.
+</em>   Annotate an image.</p>
+<p>Examples:</p>
+<ul>
+<li>DH@WCU: <a href="http://digitalhumanities.wcu.edu/digital-humanities-tools/storymapjs/">http://digitalhumanities.wcu.edu/digital-humanities-tools/StoryMapjs/</a> </li>
+</ul>
+<h3 id="in-the-classroom">In the Classroom</h3>
+<p>Develop class projects in which students are asked to:
+<em>   Create a photo essay.
+</em>   Analyze a series of historical events.
+<em>   Use StoryMapJS as a study tool for learning places, dates, and associated facts.
+</em>   Explore interactive digital storytelling as a communications medium.
+*   Publish a visual analysis of a single image.</p>
+<p>Examples:</p>
+<ul>
+<li>
+<p><a href="https://historyblogger.net/2014/12/26/teaching-with-tumblr-and-storymapjs/comment-page-1/">"Teaching with Tumblr and StoryMapJS."</a> <em>History Blogger</em>. (December 26, 2014)</p>
+</li>
+<li>
+<p>Hackman, Meg. <a href="http://www.storybench.org/how-we-mapped-pumpkin-spice-lattes-to-teach-students-digital-storytelling-skills/">"How we mapped pumpkin spice lattes to teach students digital storytelling skills"</a> (November 12, 2015)</p>
+</li>
+</ul>
+<h3 id="in-a-publication-or-presentation">In a Publication or Presentation</h3>
+<p>StoryMapJS can be embedded in other web pages, so it's possible to use it in a digital publication or as part of a conference presentation. You can also publish a link to a StoryMap in a print essay. Visualize a narrative important to your argument. Annotate an image. Add a spatial narrative that includes multimedia gathered or created as part of your research.</p>
+<h2 id="create-a-storymap">Create a StoryMap</h2>
+<h3 id="whats-your-story">What's your story?</h3>
+<p>A StoryMap's primary purpose is to promote new knowledge and understanding of a particular topic. Every StoryMap is made up of individual events woven together to form a narrative that guides viewers to that knowledge and understanding</p>
+<p>To begin developing your story, consider answers to these questions: </p>
+<ul>
+<li>What is your story about?</li>
+<li>Why is this person, place, thing, or event significant?</li>
+<li>What is the most important piece of information that viewers should learn from the story?</li>
+<li>How does space or location matter to your story?</li>
+</ul>
+<p>Then create a list, storyboard, or sketch. Based on your answers to these questions, what are the significant moments or events that make up your story? Use any method that works for you, but do this outside of StoryMapJS. </p>
+<h3 id="gather-media-content">Gather Media Content</h3>
+<p>You content may be your own, or it may be gathered from other sources. Keep in mind:</p>
+<ul>
+<li>Depending on the content type, media may be uploaded (images) or hosted elsewhere (audio, video, etc.). </li>
+<li>Keep in mind that each StoryMap slide is set up for only one media item. If you want to add extras, you'll insert them in the HTML editor.</li>
+<li>Make sure to attribute your images in the credit textbox that accompanies each media item. </li>
+</ul>
+<p><strong>Media Types</strong>
+The following media types can be embedded in a StoryMapJS slide using the url from each application's "share" feature:</p>
+<ul>
+<li>DailyMotion</li>
+<li>Flickr</li>
+<li>Google Doc</li>
+<li>Google+</li>
+<li>Any iframe-formatted* content </li>
+<li>Instagram</li>
+<li>SoundCloud</li>
+<li>Storify</li>
+<li>Twitter</li>
+<li>Vimeo</li>
+<li>Vine</li>
+<li>Wikipedia</li>
+<li>Youtube</li>
+<li>And more...try something! You can also upload an image of your own and embed that without having it hosted online separately. </li>
+</ul>
+<p>*<em>An iframe is actually an HTML Embed Code that allows you to embed another document or media type in your page, not a media type itself. An iframe in a StoryMap could show another StoryMap, for example.</em></p>
+<h3 id="create-edit-a-storymap">Create &amp; Edit a StoryMap</h3>
+<p>StoryMapJS requires a Google account. If you do not have a Google account you can navigate to <a href="https://accounts.google.com/">https://accounts.google.com/</a> and click "Create an Account" to set up a Google account.</p>
+<ol>
+<li>Navigate to <a href="https://storymap.knightlab.com">https://StoryMap.knightlab.com</a>.</li>
+<li>Click the green "Make a StoryMap now" button.  </li>
+<li>Click "Login with your Google account."</li>
+<li>In the "Your StoryMaps" popup, click "New." <em>Once you've created a StoryMap, a list will appear in this popup window every time you access StoryMapJS.</em></li>
+<li>Give your new StoryMap a name and click "Create".</li>
+<li>
+<p>You'll be redirected to the StoryMap editing page. This area has a very simple structure: <img alt="StoryMap page guide" src="images/layout.png#right#60" />  </p>
+<ol>
+<li>Map viewing window.</li>
+<li>List of slides/events. </li>
+<li>Slide editing area.</li>
+<li>StoryMap options.</li>
+<li>Preview.</li>
+<li>Share.</li>
+<li>Use your StoryMap outline/storyboard/sketch to begin creating slides.</li>
+</ol>
+</li>
+<li>
+<p>The first screen is your title slide. Enter a title for your project (in the "headline" field), attributions, and an overview of what users will find in the StoryMap. As you create additional slides, this title slide will update to show all the points you have marked on your other slides.</p>
+<ol>
+<li>Create additional slides for each event or point in your narrative by clicking the "add slide" button on the left. </li>
+</ol>
+</li>
+<li>Associate a location with each slide. There are three methods: <img alt="marker on map" src="images/marker.png#right#50" /><ol>
+<li>Drag and drop the marker on the map.</li>
+<li>Enter a street address in the search box.</li>
+<li>Enter geographic coordinates in the search box. <em>You can get coordinates from Google Maps by navigating to the place you want to mark in Google Maps, right clicking on it, and choosing "what's here?" from the menu. A card will pop up that includes latitude and longitude. <img alt="box showing geographic coordinates" src="images/coordinates.png#right#50" />In the example to the right showing Durham, the coordinates are approximately 36, -78.91.</em> </li>
+</ol>
+</li>
+<li>Add details as described in "Anatomy of a StoryMap Slide" below.</li>
+<li>Save your work frequently. </li>
+<li>When you're ready, click "Share" to get a public URL for your StoryMap, send it to social media, or grab an embed code to place the StoryMap on a web page.</li>
+</ol>
+<h3 id="anatomy-of-a-storymap-slide">Anatomy of a StoryMap Slide</h3>
+<p>Every slide must have a title (called a headline) and a location. It can also have descriptive text and visual or audio content such as images, video, sound clips, and other interactive content.</p>
+<p><strong>Descriptive text</strong> can be typed or pasted into the textbox below the headline field. The bold and italics buttons can be used to format the text, and urls can be added with the link button. Further text customization and structuring can be done in the HTML Editor.</p>
+<p><strong>Media</strong> can be uploaded from a local file, linked to via URL, or embedded using an HTML iframe:</p>
+<ul>
+<li>Use the "Upload an Image" button to upload images in .jpg, .jpeg, .png, or .gif formats.</li>
+<li>To embed via URL, locate the media's "share" button and use the URL from that. <em>In many cases, the URL in the browser window will not work.</em> </li>
+<li>To embed media via <strong>iframe</strong>, you will need to locate a string of HTML code in the media's share menu (look for an "Embed" field or tab). The code for an iframe will look something like:  <code>&lt;iframe width="420" height="315" src="https://www.youtube.com/embed/NEsBHHXW9FQ" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</code><br />
+<em>Note that an iframe is <em>always</em> bookended by "&lt;iframe>" HTML tags.</em></li>
+</ul>
+<p>Always include a media credit in the "Credit" field (unless the media is in the public domain) and consider including a caption.</p>
+<h3 id="sharing-your-storymap">Sharing your StoryMap</h3>
+<p>When you are ready to share your StoryMap with the world, you can share via URL, social media, or embedded iframe:</p>
+<ol>
+<li>Click the "Share" button.<img alt="Share window" src="images/share.png#right#50" /></li>
+<li>Copy/paste the link or click a social media icon to share on Twitter, Facebook, Google+, or Reddit. </li>
+<li>To embed your StoryMap as an iframe in another web page, scroll down to the "Embed" textbox.</li>
+<li>Select all of the text (HTML code) in the Embed textbox, including the &lt;&gt; tags at the beginning and end. Paste this code into the HTML editor on another website.</li>
+</ol>
+<h2 id="saving-your-storymap">Saving your StoryMap</h2>
+<p>StoryMapJS stores your StoryMaps on an Amazon server as long as you wish to keep it--and as long as the tool continues to exist. However, you should keep a separate archive of your StoryMaps so that you can recreate it if needed.</p>
+<p>Items to include in a StoryMapJS Archive:</p>
+<ul>
+<li>Outline/storyboard</li>
+<li>Descriptive text</li>
+<li>HTML*</li>
+<li>Media Files, URLs, and embed codes</li>
+<li>Slide locations (street addresses, geographic coordinates)</li>
+<li>"ReadMe" text file of custom settings</li>
+<li>Optional: Screenshots of the StoryMap</li>
+</ul>
+<p>*<em>You can save the code for your StoryMap by navigating to it in your browser, then saving the page to your computer or a cloud location. Make sure to select "web page <strong>complete</strong>" as your option to save all the code together. This may be saved in several files; either move them to one folder or create a zip archive to keep them together.</em> </p>
+<h2 id="beyond-the-basics-customizations">Beyond the Basics: Customizations</h2>
+<h3 id="html-editing">HTML Editing</h3>
+<p>In the slide description textbox, click the <code>&lt;/&gt;</code> icon to enable HTML editing. StoryMapJS accepts HTML5 tags and inline CSS (though some specific HTML5 tags &amp; CSS attributes may be stripped). This means you can include secondary media using <code>&lt;img&gt;</code> and <code>&lt;iframe&gt;</code> tags. Other media tags may be supported — try them out and let us know!</p>
+<p><img alt="menu with html editor highlighted" src="images/htmledit.png#right" />Before typing or pasting in HTML, <em>make sure</em> that you have selected the HTML editor by clicking the editor button icon <code>&lt;/&gt;</code>. When you are in HTML editing mode, the editor button will be highlighted in white, as in the example on the right. Pasting code into the rich text editor may cause HTML tags to be stripped and you will have to retype or repaste your code.</p>
+<p>Always save custom HTML in text files outside of StoryMapJS.</p>
+<h3 id="styling-a-storymap">Styling a StoryMap</h3>
+<p><strong>Customize your overall StoryMap</strong> in the "Options" popup window: set the StoryMap's size, choose a Language and Font pairings, include a "Call to Action" on the introductory slide, and choose your map type.</p>
+<p><strong>Customize individual slides</strong> in the "Slide Options" popup window: change a slide's background color or add a background image to the slide. </p>
+<p><strong>Using background images: </strong>Choose background colors and images that support rather than detract from text or other media in your slides. The slides are semi-transparent, so some part of the map will always be visible behind the background. In addition, use high resolution images for the background. It's recommended that background images be at least 750 pixels wide. StoryMapJS adjusts its size depending on screen &amp; browser size, so images may be cut to fit the slide. This means you should choose background images for which it isn't necessary to see visual information at images' edges.</p>
+<h3 id="choosing-a-base-map">Choosing a Base Map</h3>
+<p>StoryMapJS offers a number of open source base maps. There are satellite views available as well as schematic views. Choose a base map based on the style and kind of information you wish your users to see.  </p>
+<p>To select a new base map, click "options." On the "display" tab (which should be the first one to load), edit the choice in the "Map Type" dropdown box. </p>
+<h3 id="adding-a-custom-map">Adding a Custom Map</h3>
+<p>It is possible to add a custom map to StoryMapJS. This can be useful if you have a specific map style you wish to use that is not available in StoryMapJS. It can also be useful for including historical map layers on top of present day maps.</p>
+<p>StoryMapJS accepts <a href="https://en.wikipedia.org/wiki/Tiled_web_map">XYZ map tiles</a> for basemaps. One free tool for creating custom basemaps in this format is Mapbox (<a href="https://www.mapbox.com/">https://www.mapbox.com/</a>). Mapbox provides <a href="https://www.mapbox.com/help/getting-started-mapbox-studio-1/">extensive tutorials</a> on creating custom maps.</p>
+<p>To use a Mapbox map as a StoryMapJS base map:</p>
+<ol>
+<li>In Mapbox, choose the Style you wish to use. On the Style's page, click "Share, develop &amp; use" (right column).</li>
+<li>Locate the "Use style in GIS apps" block. Select "CartoDB" and copy the URL in the textbox. <img alt="mapbox interface" src="images/mapbox.png#right#60" /></li>
+<li>In the StoryMapJS Options, select "Mapbox" in the "Map Type" field.</li>
+<li>Paste the Mapbox URL into the URL field under "Map Type" in StoryMapJS.</li>
+<li>Close the popup window to save your changes and test the base map.</li>
+</ol>
+<p>If you are using a non-Mapbox tiled map as a custom StoryMapJS base map: </p>
+<ol>
+<li>Put your tiles on a server. Currently, it is possible to use Box this way, but you will need to put the folder with the image tiles in a public folder and get the url from the "share" link. <strong>Do not use the link in the browser window.</strong></li>
+<li>Choose "Options" and select "custom" in the "Map Type" menu.</li>
+<li>Enter the url from the "share" tool in the url window below the "Map Type" menu.</li>
+</ol>
+<h3 id="using-a-gigapixel-image">Using a Gigapixel Image</h3>
+<p>Rather than using a map as the base and creating a geospatial narrative, you might wish to annotate an image or create a (non-geo)spatial narrative using an image other than a base map. This can be done using a <a href="https://en.wikipedia.org/wiki/Gigapixel_image">gigapixel image</a>. Here's an example: <a href="https://storymap.knightlab.com/examples/bosch-garden/">https://StoryMap.knightlab.com/examples/bosch-garden/</a>. </p>
+<p>StoryMapJS provides instructions for several methods for creating the gigapixel image tiles that are required to use the image in a StoryMap: <a href="https://storymap.knightlab.com/gigapixel/">https://StoryMap.knightlab.com/gigapixel/</a>. We recommend following the instructions for exporting a "Zoomify" image from Photoshop that can be found in the "show me how" link.</p>
+<h2 id="resources">Resources</h2>
+<ul>
+<li>Get more answers &amp; how-tos: <a href="https://storymap.knightlab.com/#help">https://StoryMap.knightlab.com/#help</a> </li>
+<li>Follow StoryMapJS latest issues &amp; news: <a href="http://knightlab.northwestern.edu/tag/storymapjs/">http://knightlab.northwestern.edu/tag/StoryMapjs/</a> </li>
+<li>Access the code: <a href="https://github.com/NUKnightLab/StoryMapJS">https://github.com/NUKnightLab/StoryMapJS</a></li>
+<li>
+<p>Video Tutorials:</p>
+<ul>
+<li><a href="https://youtu.be/T-C64JO7lMg">Introduction to StoryMapJS</a>. September 30, 2015.</li>
+<li><a href="https://youtu.be/Nbk5yc3ybUg">How to create an immersive Gigapixel image in StoryMap.</a> April 28, 2014.</li>
+<li>A list of other interactive storytelling tools: <a href="https://wp.nyu.edu/digitalgallatin/category/all-tools/storytelling/">https://wp.nyu.edu/digitalgallatin/tools/storytelling/</a>. </li>
+</ul>
+</li>
+<li>
+<p>Research on StoryMapJS &amp; Interactive Storytelling:</p>
+<ul>
+<li>Huffman, Suzanne and Katherine Perdue. "The Interactive Experience: Exploring Technologies for Creating Touchscreen Exhibits." <em>MARAC Conference</em>, Roanoke, VA. October 7-10, 2015. <a href="http://drum.lib.umd.edu/handle/1903/18488">http://drum.lib.umd.edu/handle/1903/18488</a>.</li>
+<li>Mellon, Christopher J. "Combat Stories: creating a web-based geospatial interface to record combat stories for validation and other research purposes." <em>Naval Postgraduate School Capstone Project</em>. June 2015. <a href="http://calhoun.nps.edu/bitstream/handle/10945/45906/15Jun_Mellon_Christopher.pdf?sequence=1&amp;isAllowed=y">http://calhoun.nps.edu/bitstream/handle/10945/45906/15Jun_Mellon_Christopher.pdf?sequence=1&amp;isAllowed=y</a>. </li>
+<li>Niederstadt, Leah, Jade Werner, Domingo Ledezma, and Jenni Lund. "Mapping in the Humanities Classroom: An Assessment of Tools and Strategies." <em>Blended Learning in the Liberal Arts Conference</em>. May 19, 2016. <a href="http://repository.brynmawr.edu/blended_learning/2016/2016/18/">http://repository.brynmawr.edu/blended_learning/2016/2016/18/</a>  </li>
+</ul>
+</li>
+</ul>
+<!-- GD2md-html version 1.0β11 -->
+    
+        
+    
+
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../intro2omk/" title="Introduction to Omeka" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Introduction to Omeka
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.583bbe55.js"></script>
+      
+      <script>app.initialize({version:"1.0.1",url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
