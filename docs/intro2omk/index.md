@@ -17,7 +17,7 @@ Omeka ([http://omeka.org/](http://omeka.org/)) is a web content management syste
 
 Omeka's archival structure is made up of Items (objects) organized into Collections (groups of objects).
 
-<img src="images/image15.png" width="25%"/>
+<img src="https://dukewired.github.io/tutorials/intro2omk/images/image15.png" width="25%"/>
 
 ![Omeka's data structure](images/image15.png#center#50)
 
